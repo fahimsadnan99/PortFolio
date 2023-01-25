@@ -8,19 +8,19 @@ const Navbar = () => {
     let [darkMood,setDarkMood] = useState(false)
     let NabLink = [
         {
-            name : "Home", link : "/"
+            name : "Home", link : "#Home"
         },
         {
-            name : "About", link : "/about"
+            name : "About", link : "#About"
         },
         {
-            name : "Skills", link : "/skills"
+            name : "Skills", link : "#Skills"
         },
         {
-            name : "Portfolio", link : "/portfolio"
+            name : "Portfolio", link : "#Portfolio"
         },
         {
-            name : "Contact", link : "/contact"
+            name : "Contact", link : "#Contact"
         }
     ]
 
@@ -34,11 +34,11 @@ const Navbar = () => {
 
     },[darkMood])
   return (
-    <div className='w-full shadow-md fixed top-0 left-0 z-[999]'>
-        <div className='bg-darkColor   md:px-10 md:flex items-center justify-between'>
-        <p className=' font-bold px-7 md:px-0 dark:text-white'>
-            <img src={Logo} alt="logo" className='w-32 h-20' />
-         </p>
+    <div className='w-full shadow-md fixed top-0 left-0 z-[999] '>
+        <div className='bg-darkColor  md:px-10 md:flex items-center justify-between xs:py-4 md:py-0'>
+        <a className=' font-bold  md:px-0 dark:text-white' href='#Home'>
+            <img src={Logo} alt="logo" className='md:w-32 md:h-20 xs:w-24 xs:h-12' />
+         </a>
 
 <div className=' cursor-pointer md:hidden absolute top-5 right-20 text-3xl text-white ' onClick={()=> setOpen(!open)}>
 <ion-icon name={open ? "close" :"menu"} ></ion-icon>
@@ -51,7 +51,7 @@ const Navbar = () => {
     NabLink.map((link,index)=>{
         return (<li key={index} className='md:ml-8'>
            
-            <NavLink to={link.link} className='text-xl ' onClick={()=>  setOpen(!open)} >{link.name}</NavLink>
+            <a href={link.link} className='text-xl ' onClick={()=>  setOpen(!open)} >{link.name}</a>
         </li>)
     })
  }
