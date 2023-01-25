@@ -22,7 +22,7 @@ const HeroRightSide = () => {
   }, [deg]);
 
   return (
-    <div className=" w-full xs-px-18 flex items-center justify-around lg:h-screen xs:py-20 lg:py-0 lg:pt-16  xs:pt-10">
+    <div className=" w-full xs-px-18 flex items-center justify-around lg:h-screen xs:py-20 lg:py-0 lg:pt-16  xs:pt-10 overflow-x-hidden">
       <div className="w-32 sm:w-28 md:32  dark:text-purple-400 md:text-3xl sm:text-xl  font-semibold italic ">
         {TypeText(deg)}
       </div>
