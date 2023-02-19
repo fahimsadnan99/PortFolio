@@ -4,7 +4,7 @@ import {BsFillSunFill,BsFillMoonStarsFill} from "react-icons/bs"
 import "./style.css"
 import Logo from "../assets/Gold Luxury Logo of King Perfume Brand identity.gif"
 const Navbar = () => {
-    let [open,setOpen] = useState(true)
+    let [open,setOpen] = useState(false)
     let [darkMood,setDarkMood] = useState(false)
     let NabLink = [
         {
